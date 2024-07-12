@@ -1,0 +1,43 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Photo Gallery Section */
+.photo-gallery-section {
+  padding: 20px;
+}
+
+/* Masonry Layout */
+.photo-gallery-body {
+  column-count: 3;
+  column-gap: 10px;
+}
+
+.photo-column {
+  break-inside: avoid;
+  margin-bottom: 10px;
+}
+
+.gallery-image {
+  width: 100%;
+  display: block;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .photo-gallery-body {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 480px) {
+  .photo-gallery-body {
+    column-count: 1;
+  }
+}

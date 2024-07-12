@@ -1,0 +1,32 @@
+.parent-container {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+@media (max-width: 1200px) {
+  .parent-container {
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+}
+
+@media (max-width: 992px) {
+  .parent-container {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+}
+
+@media (max-width: 768px) {
+  .parent-container {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+}
+
+@media (max-width: 576px) {
+  .parent-container {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+}

@@ -1,0 +1,252 @@
+/* Existing styles */
+.rates {
+    padding: 20px;
+}
+
+.rates-top {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rates-container {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap; /* Ensure the content wraps on smaller screens */
+}
+
+.rates-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.rates-image {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.rates-text-container {
+    flex: 1;
+    text-align: left;
+    padding: 10px;
+}
+
+.rates-heading {
+    font-size: 36px;
+    font-family: 'Sacramento', serif;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+
+.rates-description {
+    font-size: 16px;
+    color: #5e5e5e;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    font-family: 'Raleway', arial, sans-serif;
+}
+
+.learn-more-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #333;
+    background-color: #fff;
+    border: 1px solid #333;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.learn-more-button:hover {
+    background-color: #f0f0f0;
+}
+
+.features-section {
+    text-align: center;
+    padding-top: 40px;
+}
+
+.features-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-card {
+    flex: 1 1 30%; /* Flex-grow: 1, Flex-shrink: 1, Flex-basis: 30% */
+    margin: 20px;
+    text-align: center;
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+}
+
+.feature-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding: 10px;
+    width: 100%;
+    max-width: 250px; /* Optional max width */
+    height: 200px;
+    margin: 0 auto 40px;
+}
+
+.feature-image {
+    max-width: 100%;
+    border-radius: 50%;
+    border: 8px solid #00bcd4;
+}
+
+.feature-heading {
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    line-height: 1.25;
+    font-weight: 400;
+    letter-spacing: 0.107em;
+    font-family: 'Raleway', arial, sans-serif;
+}
+
+.feature-description {
+    font-size: 16px;
+    color: #5e5e5e;
+    line-height: 1.5;
+    color: rgb(36, 37, 37);
+    font-family: 'Raleway', arial, sans-serif;
+}
+
+.additional-rates-section {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.additional-rates-container {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap; /* Ensure the content wraps on smaller screens */
+}
+
+.additional-rates-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.additional-rates-image {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.additional-rates-text-container {
+    flex: 1;
+    text-align: left;
+    padding: 10px;
+}
+
+.additional-rates-heading {
+    font-size: 36px;
+    font-family: 'Sacramento', serif;
+    margin-bottom: 20px;
+    font-weight: normal;
+    margin-top: 0px;
+}
+
+.additional-rates-description {
+    font-size: 16px;
+    color: #5e5e5e;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    font-family: 'Raleway', arial, sans-serif;
+}
+
+.additional-rates-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #333;
+    background-color: #fff;
+    border: 1px solid #333;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.additional-rates-button:hover {
+    background-color: #f0f0f0;
+}
+
+/* Testimonials styles */
+.testimonials-section {
+    padding: 50px 0px;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+}
+
+.testimonials-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.testimonial-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    font-family: 'Raleway', sans-serif;
+}
+
+.testimonial-title {
+    color: #333;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    line-height: 1.25;
+    font-weight: 400;
+    letter-spacing: 0.107em;
+    font-family: 'Raleway', arial, sans-serif;
+}
+
+.testimonial-description {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+    .rates-container, .additional-rates-container {
+        flex-direction: column; /* Stack text below image */
+    }
+
+    .feature-card {
+        flex: 1 1 100%; /* Ensure feature cards use full width on small screens */
+    }
+
+    .feature-image-container {
+        width: 100%; /* Ensure feature images shrink */
+        height: auto;
+    }
+
+    .feature-image {
+        width: 100%; /* Ensure feature images shrink */
+        height: auto;
+    }
+}

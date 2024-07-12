@@ -1,0 +1,93 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+/* Specific Element Styles */
+.lakes-text-container {
+  font-family: 'Raleway', sans-serif;
+}
+
+/* Lakes Section */
+.lakes-section {
+  padding: 20px;
+}
+
+.lakes-body {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.lakes-image-container,
+.lakes-text-container {
+  flex: 1;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.lakes-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lakes-image-wrapper {
+  border: 5px solid #00BFFF;
+  display: inline-block;
+}
+
+.lakes-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.lakes-text-container {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 20px;
+}
+
+.lakes-text-container h4 {
+  margin-bottom: 10px;
+}
+
+.lakes-text-container p {
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: rgb(94, 94, 94);
+  line-height: 1.5;
+  font-weight: 400;
+  font-family: 'Raleway', arial, sans-serif;
+  letter-spacing: normal;
+}
+
+@media (max-width: 768px) {
+  .lakes-body {
+    flex-direction: column;
+    align-items: center; /* Ensure the items are centered */
+  }
+
+  .lakes-image-container,
+  .lakes-text-container {
+    max-width: 100%;
+    margin: 0;
+    padding: 10px;
+  }
+
+  .lakes-image-container {
+    margin-bottom: 20px;
+    justify-content: center; /* Center the image container */
+  }
+
+  .lakes-image-wrapper {
+    margin: 0 auto; /* Center the image wrapper */
+  }
+}

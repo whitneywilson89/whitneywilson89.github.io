@@ -1,0 +1,30 @@
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .logo-image {
+    max-width: none; /* Prevent scaling down */
+    height: auto;
+  }
+  
+  @media (max-width: 1200px) {
+    .logo-image {
+      max-width: 60%; /* Adjust the width for medium screens */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .logo-image {
+      max-width: 80%; /* Adjust the width for small screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .logo-image {
+      max-width: 90%; /* Adjust the width for extra small screens */
+    }
+  }
+  

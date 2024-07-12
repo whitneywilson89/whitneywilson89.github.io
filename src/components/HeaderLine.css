@@ -1,0 +1,25 @@
+.header-line-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.line-l {
+    flex: 1;
+    height: 1px;
+    background-color: black;
+    margin-right: 20px;
+}
+
+.line-r {
+    flex: 1;
+    height: 1px;
+    background-color: black;
+    margin-left: 20px;
+}
+
+.header-line-container .lakes-heading {
+    font-size: 36px;
+    font-family: 'Sacramento', serif, system-ui;
+}
