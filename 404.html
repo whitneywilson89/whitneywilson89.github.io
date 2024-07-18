@@ -13,7 +13,7 @@
       if (path.startsWith('/')) {
         path = path.substring(1); // Remove the leading slash
       }
-      window.location.replace('/?' + path);
+      window.location.replace('/?redirect=' + path);
     </script>
   </body>
 </html>
