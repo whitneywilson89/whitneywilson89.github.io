@@ -14,6 +14,8 @@
     padding: 20px;
     box-sizing: border-box;
     text-align: left;
+    position: relative;
+    transition: transform 0.5s ease-in-out;
 }
 
 .body2 {
@@ -93,7 +95,6 @@
     cursor: pointer;
 }
 
-
 .hours-details {
     margin-top: 10px;
 }
@@ -132,21 +133,82 @@
     color: black;
 }
 
+.form-container {
+    padding: 20px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form h3 {
+    font-size: 16px;
+    color: rgb(27, 27, 27);
+    margin-bottom: 24px;
+    line-height: 1.25;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.107em;
+    font-family: Raleway, arial, sans-serif;
+}
+
+.contact-form label {
+    margin-top: 10px;
+    font-size: 16px;
+    color: rgb(71, 71, 71);
+    font-weight: 400;
+    font-family: Raleway, arial, sans-serif;
+    letter-spacing: normal;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+}
+
+textarea {
+    min-height: 80px;
+}
+
+.contact-form .form-actions {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+.contact-form .form-actions button {
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Raleway', arial, sans-serif;
+    color: #333;
+    background-color: #fff;
+    border: 1px solid #333;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form .form-actions button:hover {
+    background-color: #4DB0D1;
+}
+
 @media (max-width: 768px) {
     .contact-body {
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
 
-    .body2 {
-        text-align: center;
+    .form-container {
+        padding: 0px;
     }
 
-    .hours-row {
-        justify-content: flex-start;
-    }
-
-    .hours-row span:last-child {
-        text-align: left;
-        padding-left: 10px;
+    .contact-image {
+        width: 100%;
     }
 }

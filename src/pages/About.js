@@ -15,10 +15,10 @@ const About = () => {
             <img src={image1} alt="About Us" className="about-image" />
           </div>
           <div className="about-services-text-container">
-            <h4>WILSON GUIDE SERVICE SERVICES INCLUDE:</h4>
+            <h4>OUR SERVICES INCLUDE:</h4>
             <ul>
-              <li>Multi species fishing, including Striper, Hybrid, Bass, Crappie & Perch</li>
-              <li>Gift Certificates For All Occasions</li>
+              <li>Multi Species Fishing, Including Striper, Hybrid, Bass, Crappie & Perch</li>
+              <li>Gift Certificates for All Occasions</li>
               <li>All Required Fishing Gear Provided</li>
               <li>Children and Family Welcome!</li>
             </ul>

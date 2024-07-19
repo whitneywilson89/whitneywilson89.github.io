@@ -32,9 +32,33 @@ function App() {
   }, [location, navigate]);
 
   useEffect(() => {
-    console.log("Heyy")
-    ReactGA.send({ hitType: 'pageview', page: window.location.pathname + window.location.search});
-  }, []);
+    let pageName = "";
+    switch (window.location.pathname) {
+      case '/':
+        pageName = "Home";
+        break;
+      case '/about':
+        pageName = "About";
+        break;
+      case '/lakes':
+        pageName = "Lakes";
+        break;
+      case '/gallery':
+        pageName = "Gallery";
+        break;
+      case '/rates':
+        pageName = "Rates";
+        break;
+      case '/contact':
+        pageName = "Contact";
+        break;
+      default:
+        pageName = "Unknown";
+        break;
+    }
+  
+    ReactGA.send({ hitType: 'pageview', page: window.location.pathname, title: pageName});
+  }, [location]);
 
   if (isLoading) {
     return null; // Render nothing or a loading spinner while isLoading is true

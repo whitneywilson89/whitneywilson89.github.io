@@ -17,11 +17,11 @@ const Rates = () => {
                         <img src={ratesImage} alt="Fishing Guide" className="rates-image" />
                     </div>
                     <div className="rates-text-container">
-                        <h2 className="rates-heading">Professional Fishing Guide</h2>
+                        <h2 className="rates-heading">Professional Fishing Guides</h2>
                         <p className="rates-description">
                             Wilson's Guide Service takes great pride to ensure you have one of the best fishing experiences in your life. It is more than just catching fish! All needed supplies are included; you just need to bring a Georgia or South Carolina license.
                         </p>
-                        <button className="learn-more-button">Learn More</button>
+                        <Link to='/about'><button className="learn-more-button">Learn More</button></Link>
                     </div>
                 </div>
             </section>
@@ -42,7 +42,7 @@ const Rates = () => {
                         </div>
                         <h3 className="feature-heading">All Ages</h3>
                         <p className="feature-description">
-                            Everyone is welcome on our boat. Whether you're 3 or 93, as long as you have a love for catching fish, we can help you!
+                            Everyone is welcome on our boat. Whether you're 3 or 93, as long as you love fishing, we can help you!
                         </p>
                     </div>
                     <div className="feature-card">
