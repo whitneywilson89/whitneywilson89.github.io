@@ -1,9 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Contact.css';
 import HeaderLine from '../components/HeaderLine';
-import image4 from './../images/IMG_005.jpg';
+import upArrow from './../images/up-arrow.svg';
+import downArrow from './../images/down-arrow.svg';
 
-const Contact = () => {
+const Contact = ({contactImage}) => {
+    const [showHours, setShowHours] = useState(false);
+
+    const toggleHours = () => {
+        setShowHours(!showHours);
+    };
+
+    const getCurrentDay = () => {
+        const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+        const date = new Date();
+        return days[date.getDay()];
+    };
+
+    const currentDay = getCurrentDay();
+
+    const hours = {
+        Mon: "05:00 am – 10:00 pm",
+        Tue: "05:00 am – 10:00 pm",
+        Wed: "05:00 am – 10:00 pm",
+        Thu: "05:00 am – 10:00 pm",
+        Fri: "05:00 am – 10:00 pm",
+        Sat: "05:00 am – 10:00 pm",
+        Sun: "Closed",
+    };
+
     return (
         <section className="contact-section">
             <HeaderLine header="Contact Us" />
@@ -21,12 +46,37 @@ const Contact = () => {
                     <p><a href="mailto:guide.wendell.wilson@gmail.com">guide.wendell.wilson@gmail.com</a></p>
                     <div className="section">
                         <h4>Hours</h4>
-                        <p>Open today <span>05:00 am – 10:00 pm</span></p>
+                        {!showHours ? (
+                            currentDay === "Sun" ? (
+                                <p onClick={toggleHours} className="hours-toggle">
+                                    Closed today <img src={downArrow} alt="Down Arrow" className='arrow' />
+                                </p>
+                            ) : (
+                                <p onClick={toggleHours} className="hours-toggle">
+                                    <span>Open today <span className="today-hours">{hours[currentDay]}</span></span> <img src={downArrow} alt="Down Arrow" className='arrow' />
+                                </p>
+                            )
+                        ) : (
+                            <div className="hours-details">
+                                {Object.keys(hours).map((day, index) => (
+                                    <div key={day} className={`hours-row ${day === currentDay ? 'current-day' : ''}`}>
+                                        <span>{day}</span>
+                                        <span>
+                                            {hours[day]}
+                                            {index === 0 && (
+                                                // <span onClick={toggleHours} className="arrow arrow-up">▲</span>
+                                                <img onClick={toggleHours} src={upArrow} alt="Up Arrow" className='arrow' />
+                                            )}
+                                        </span>
+                                    </div>
+                                ))}
+                            </div>
+                        )}
                     </div>
-                    {/* <button className="contact-button">Drop us a line!</button> */}
+                    <button className="contact-button">Drop us a line!</button>
                 </div>
                 <div className="body2">
-                    <img src={image4} alt="Bass" className="contact-image" />
+                    <img src={contactImage} alt="Bass" className="contact-image" />
                 </div>
             </div>
         </section>

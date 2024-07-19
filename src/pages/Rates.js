@@ -1,5 +1,6 @@
 import React from 'react';
 import './Rates.css';
+import { Link } from 'react-router-dom';
 import ratesImage from './../images/IMG_010.jpg'; // Update the image path
 import image1 from './../images/IMG_011.jpg';
 import image2 from './../images/IMG_012.jpg';
@@ -61,11 +62,11 @@ const Rates = () => {
                         <img src={ratesImage2} alt="Rates" className="additional-rates-image" />
                     </div>
                     <div className="additional-rates-text-container">
-                        <h2 className="additional-rates-heading">Rates</h2>
-                        <p className="additional-rates-description">$300 for 2 people</p>
-                        <p className="additional-rates-description">$350 for 3 people</p>
-                        <p className="additional-rates-description">$400 for 4 people</p>
-                        {/* <button className="additional-rates-button">Find Out More</button> */}
+                        <h2 className="additional-rates-heading">Rates for a 6-Hour Trip</h2>
+                        <span className="additional-rates-description">$300 for 2 people</span>
+                        <span className="additional-rates-description">$350 for 3 people</span>
+                        <span className="additional-rates-description">$400 for 4 people</span>
+                        <Link to="/contact"><button className="additional-rates-button">Contact Us Today for a Custom Fishing Trip!</button></Link>
                     </div>
                 </div>
             </section>

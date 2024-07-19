@@ -2,28 +2,40 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 
-const Navbar = () => {
-  const [isMobile, setIsMobile] = useState(false);
+const NavBar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
 
-  const toggleMobileMenu = () => {
-    setIsMobile(!isMobile);
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
+  const handleLinkClick = () => {
+    setMenuOpen(false); // Close the menu when a link is clicked
   };
 
   return (
     <nav className="navbar">
-      <ul className={isMobile ? 'nav-links-mobile' : 'nav-links'}>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/about">About</Link></li>
-        <li><Link to="/lakes">Lakes</Link></li>
-        <li><Link to="/gallery">Gallery</Link></li>
-        <li><Link to="/rates">Rates</Link></li>
-        <li><Link to="/contact">Contact</Link></li>
-      </ul>
-      <button className="mobile-menu-icon" onClick={toggleMobileMenu}>
-        {isMobile ? <i className="fas fa-times"></i> : <i className="fas fa-bars"></i>}
-      </button>
+      <div className="navbar-container">
+        <div className="menu-icon" onClick={toggleMenu}>
+          ☰
+        </div>
+        <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
+          <li><Link to="/" onClick={handleLinkClick}>Home</Link></li>
+          <div className="horizontal-line"></div>
+          <li><Link to="/about" onClick={handleLinkClick}>About</Link></li>
+          <div className="horizontal-line"></div>
+          <li><Link to="/lakes" onClick={handleLinkClick}>Lakes</Link></li>
+          <div className="horizontal-line"></div>
+          <li><Link to="/gallery" onClick={handleLinkClick}>Gallery</Link></li>
+          <div className="horizontal-line"></div>
+          <li><Link to="/rates" onClick={handleLinkClick}>Rates</Link></li>
+          <div className="horizontal-line"></div>
+          <li><Link to="/contact" onClick={handleLinkClick}>Contact</Link></li>
+        </ul>
+        {menuOpen && <div className="close-icon" onClick={toggleMenu}>✖</div>}
+      </div>
     </nav>
   );
 };
 
-export default Navbar;
+export default NavBar;

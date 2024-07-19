@@ -1,6 +1,14 @@
 .parent-container {
   padding-left: 10%;
   padding-right: 10%;
+  flex: 1;
+}
+
+/* Flexbox container */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 @media (max-width: 1200px) {

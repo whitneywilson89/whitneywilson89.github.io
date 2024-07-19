@@ -9,7 +9,7 @@ const About = () => {
   return (
     <div className="about">
       <section className="about-services">
-        <HeaderLine header="About Us" />
+        <HeaderLine header="Fishing With Us" />
         <div className="about-services-body">
           <div className="about-services-image-container">
             <img src={image1} alt="About Us" className="about-image" />
@@ -46,7 +46,7 @@ const About = () => {
           </div>
           <div className="about-profiles-text-container">
             <h4>WENDELL WILSON</h4>
-            <span>Wendell has been a full time guide since 1990. In his decades of guiding, Wendell has welcomed anglers of all ages and experience levels. Wendell is familiar with the fishing conditions on Lake Russell on a daily basis. He authors magazine articles and provides fishing reports for other websites. He, and his family live one mile from Lake Russell. Wendell has been fishing these area Lakes: Clark Hill (Thurmond) to the South, and Lake Hartwell to the North since 1973. Wendell is a multi-species guide. The most popular species are; Crappie, Stripers, Hybrids, Bass, White Perch, and Yellow Perch.</span>
+            <span>Wendell has been a full time guide since 1990. In his decades of guiding, Wendell has welcomed anglers of all ages and experience levels. He authors magazine articles and provides fishing reports for other websites. He and his family live one mile from Lake Russell. Wendell has been fishing Savannah River Basin Lakes Clark Hill (Thurmond) and Hartwell since 1973. Wendell is a multi-species guide. The most popular species are; Crappie, Stripers, Hybrids, Bass, White Perch, and Yellow Perch.</span>
           </div>
         </div>
         <div className="about-profiles-body">

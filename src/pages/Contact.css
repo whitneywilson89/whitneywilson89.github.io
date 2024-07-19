@@ -16,8 +16,8 @@
     text-align: left;
 }
 
-.body1 {
-    margin-top: 20px;
+.body2 {
+    align-content: center;
 }
 
 .body1 h3,
@@ -29,7 +29,6 @@
     text-transform: uppercase;
     font-weight: 400;
     line-height: 1.25;
-    font-size: 16px;
 }
 
 .section {
@@ -46,7 +45,7 @@
 }
 
 .body1 a {
-    color: #00bfff;
+    color: rgb(49, 127, 153);
     text-decoration: none;
 }
 
@@ -55,22 +54,82 @@
 }
 
 .contact-button {
+    /* margin-top: 20px; */
     padding: 10px 20px;
-    background-color: #00bfff;
-    border: none;
-    color: white;
-    font-size: 16px;
+    min-height: 50px;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Raleway', arial, sans-serif;
+    color: #333;
+    background-color: #fff;
+    border: 1px solid #333;
+    border-radius: 30px;
     cursor: pointer;
-    border-radius: 5px;
-    margin-top: 20px;
+    transition: background-color 0.3s ease;
 }
 
 .contact-button:hover {
-    background-color: #009acd;
+    background-color: #4DB0D1;
 }
 
 .contact-image {
-    width: 80%;
+    width: 90%;
+}
+
+.hours-toggle {
+    cursor: pointer;
+    color: #00bfff;
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+}
+
+.arrow {
+    width: 15px;
+    height: auto;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+
+.hours-details {
+    margin-top: 10px;
+}
+
+.today-hours{
+    color: rgb(49, 127, 153);
+}
+
+.today-hours:hover {
+    color: #195569;
+}
+
+.hours-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    font-family: 'Raleway', arial, sans-serif;
+}
+
+.hours-row span:first-child {
+    flex-basis: 15%;
+    font-size: 16px;
+    color: rgb(94, 94, 94);
+    line-height: 1.5;
+}
+
+.hours-row span:last-child {
+    flex-basis: 85%;
+    font-size: 16px;
+    color: rgb(94, 94, 94);
+    line-height: 1.5;
+}
+
+.current-day span {
+    font-weight: bold;
+    color: black;
 }
 
 @media (max-width: 768px) {
@@ -80,5 +139,14 @@
 
     .body2 {
         text-align: center;
+    }
+
+    .hours-row {
+        justify-content: flex-start;
+    }
+
+    .hours-row span:last-child {
+        text-align: left;
+        padding-left: 10px;
     }
 }

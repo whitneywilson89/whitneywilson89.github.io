@@ -1,6 +1,6 @@
 import './App.css';
-import React, {useEffect} from 'react';
-import { Route, Routes } from 'react-router-dom';
+import React, {useEffect, useState} from 'react';
+import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -10,21 +10,38 @@ import Gallery from './pages/Gallery';
 import Rates from './pages/Rates';
 import Contact from './pages/Contact';
 import Logo from './components/Logo';
+import image from './images/IMG_015.jpg';
 import ReactGA from 'react-ga4';
 
-const trackingId = 'G-8L9JH46KXZ';
+const trackingId = 'G-43HG1LEHWE';
 ReactGA.initialize(trackingId);
 
 function App() {
+  const [isLoading, setLoading] = useState(true);
+  const location = useLocation();
+  const navigate = useNavigate();
   
+
+  useEffect(() => {  
+    const query = new URLSearchParams(location.search);
+    const path = query.get("redirect");
+    if (path && location.pathname === '/') {
+      navigate('/' + path);
+    }
+    setLoading(false);
+  }, [location, navigate]);
 
   useEffect(() => {
     console.log("Heyy")
     ReactGA.send({ hitType: 'pageview', page: window.location.pathname + window.location.search});
   }, []);
 
+  if (isLoading) {
+    return null; // Render nothing or a loading spinner while isLoading is true
+  }
+
   return (
-    <div>
+    <div className='main-content'>
       <Navbar />
       <div className='parent-container'>
         <Logo />
@@ -34,7 +51,7 @@ function App() {
           <Route path="/lakes" element={<Lakes />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/rates" element={<Rates />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/contact" element={<Contact contactImage={image}/>} />
         </Routes>
       </div>
       <Footer />

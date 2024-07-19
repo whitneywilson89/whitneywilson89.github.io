@@ -4,16 +4,16 @@ import ima from './../images/IMG_001.jpeg';
 import image1 from './../images/IMG_002.jpg';
 import image2 from './../images/IMG_003.jpg';
 import image3 from './../images/IMG_004.jpg';
+import image4 from './../images/IMG_005.jpg';
 import HeaderLine from '../components/HeaderLine';
 import Contact from './Contact';
 
 const Home = () => {
 
   return (
-    <div className="home">
+    <div className="home-container">
       <header className="hero-section">
-        <h2 className="subtitle">Lake Russell and Clark Hill Fishing Guide</h2>
-        <img className="image" src={ima} alt="Fishing Guide" />
+        <img src={ima} alt="Fishing Guide" className="centered-image" />
       </header>
 
       <section className="about-section">
@@ -49,7 +49,7 @@ const Home = () => {
         </div>
       </section>
 
-      <Contact />
+      <Contact contactImage={image4}/>
     </div>
   );
 };
